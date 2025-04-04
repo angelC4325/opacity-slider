@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic opacity controler</title>
+</head>
+<body>
+    <label for="opacityslider">adjust opacity:</label>
+    <input type="range" id="opacityslider" min="0" max="1" step="0.1" oninput="changeop()">
+    <br>
+    <img id="sampleimage" src="download.jfif" alt="photo" style="width: 400px;height: 300px;">
+    <script>
+        function changeop(){
+            var opacityvalue=document.getElementById('opacityslider').value;
+            var image = document.getElementById('sampleimage');
+            image.style.opacity=opacityvalue
+        }
+    </script>
+</body>
+</html>
